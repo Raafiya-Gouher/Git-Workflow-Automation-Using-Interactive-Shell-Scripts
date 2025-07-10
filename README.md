@@ -66,11 +66,7 @@ git clone https://github.com/Raafiya-Gouher/Git-Workflow-Automation-Using-Intera
 cd Git-Workflow-Automation-Using-Interactive-Shell-Scripts
 ```
 
----
-
-## 🚀 Getting Started
-
-### 🔧 Step 1: Make scripts executable
+### 2. Make scripts executable
 
 ```
 chmod +x interactive_git_automation.sh
@@ -78,7 +74,7 @@ chmod +x test_git_automation.sh
 ```
 
 
-### ▶️ Step 2: Run the test script
+### 3. Run the test script
 ```
 ./test_git_automation.sh
 ```
@@ -128,9 +124,12 @@ After running the main script, you can test by:
 
 ## 🧪 Sample Output
 
-📁 Creating and initializing repo: my-test-repo
-📄 README.md created.
-🌐 Creating GitHub repo (public)...
+* Enter your GitHub repository name: Git-Workflow-Automation-Using-Interactive-Shell-Scripts
+* Enter the number of additional branches: 2
+* Enter name for branch #1: feature1
+* Enter name for branch #2: feature2
+* Do you want to include a README.md file? (yes/no): yes
+* Should the GitHub repo be public or private? (public/private): public
 ✅ 'my-test-repo' has been created and pushed successfully.
 
 📜 Git Commit History:
