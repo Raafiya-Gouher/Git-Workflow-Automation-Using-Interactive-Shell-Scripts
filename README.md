@@ -72,9 +72,9 @@ This will:
 
 Prompt you for repo name, branch names, and visibility
 
-Set up README.md (optional)
+Set up ``` README.md ``` (optional)
 
-Add version.txt with commits per branch
+Add ``` version.txt ``` with commits per branch
 
 Create a repo on GitHub
 
