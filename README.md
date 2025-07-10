@@ -124,13 +124,13 @@ After running the main script, you can test by:
 
 ## 🧪 Sample Output
 
-* Enter your GitHub repository name: Git-Workflow-Automation-Using-Interactive-Shell-Scripts
-* Enter the number of additional branches: 2
-* Enter name for branch #1: feature1
-* Enter name for branch #2: feature2
-* Do you want to include a README.md file? (yes/no): yes
-* Should the GitHub repo be public or private? (public/private): public
-✅ 'my-test-repo' has been created and pushed successfully.
+* Enter your GitHub repository name: ```Git-Workflow-Automation-Using-Interactive-Shell-Scripts```
+* Enter the number of additional branches:``` 2```
+* Enter name for branch #1: ```feature1```
+* Enter name for branch #2: ```feature2```
+* Do you want to include a README.md file? (yes/no): ```yes```
+* Should the GitHub repo be public or private? (public/private): ```public```
+* ```Git-Workflow-Automation-Using-Interactive-Shell-Scripts``` has been created and pushed successfully.
 
 📜 Git Commit History:
 ```
