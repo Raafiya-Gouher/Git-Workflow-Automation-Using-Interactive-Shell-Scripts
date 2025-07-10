@@ -96,6 +96,9 @@ After running the main script, you can test by:
 
 - Opening and reading version.txt
 
-- Verifying commit history with: git log --oneline --graph --all
+- Verifying commit history with:
+  ```
+  git log --oneline --graph --all
+  ```
 
 ---
