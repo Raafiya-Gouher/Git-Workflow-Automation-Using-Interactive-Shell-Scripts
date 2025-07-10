@@ -96,7 +96,7 @@ After running the main script, you can test by:
 
 - Viewing branches in GitHub
 
-- Opening and reading version.txt
+- Opening and reading ``` version.txt ```
 
 - Verifying commit history with:
   ```
