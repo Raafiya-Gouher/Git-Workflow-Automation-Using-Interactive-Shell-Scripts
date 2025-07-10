@@ -19,16 +19,17 @@ This project simplifies repetitive Git tasks using interactive, cross-platform *
 
 ---
 
-## 🧰 Features
+## ✨ Features
 
-| Feature | Description |
-|--------|-------------|
-| 🔧 Auto-installs Git & GitHub CLI (if missing) | No setup headaches |
-| 🌱 Creates multiple branches | With unique commit messages per branch |
-| 🗂️ Adds version tracking file (`version.txt`) | Tracks changes by branch/version |
-| 📄 Optional README.md file creation | You choose what to include |
-| 🐙 Creates and pushes to GitHub repo via CLI | Fully remote-enabled |
-| 🧪 Includes test script | Simulate & verify your workflow |
+✅ Interactive CLI inputs (repo name, branches, visibility)  
+✅ Git & GitHub CLI detection and Linux auto-installation  
+✅ GitHub authentication check  
+✅ Optional README.md file creation  
+✅ Version tracking via `version.txt`  
+✅ Public or private GitHub repo creation  
+✅ Pushes all branches and commits to GitHub  
+✅ Companion test script to simulate full workflow  
+
 
 ---
 
