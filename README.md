@@ -64,6 +64,7 @@ chmod +x interactive_git_automation.sh test_git_automation.sh
 ### ▶️ Step 2: Run the test script
 
 ./test_git_automation.sh
+
 This will:
 
 Prompt you for repo name, branch names, and visibility
