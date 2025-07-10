@@ -58,8 +58,10 @@ Git-Automation-Project/
 
 ### 🔧 Step 1: Make scripts executable
 
-
+```
 chmod +x interactive_git_automation.sh test_git_automation.sh
+```
+
 
 ### ▶️ Step 2: Run the test script
 ```
