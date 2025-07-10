@@ -32,10 +32,11 @@ This project simplifies repetitive Git tasks using interactive, cross-platform *
 
 ---
 
+
 ## 💻 File Structure
 
-📁 Git-Automation-Project/
-├── interactive_git_automation.sh # Main script (interactive)
+Git-Automation-Project/
+├── interactive_git_automation.sh # Main interactive script
 ├── test_git_automation.sh # Test runner
 ├── version.txt # Auto-updated version file
 └── README.md # You're reading it!
@@ -58,7 +59,8 @@ This project simplifies repetitive Git tasks using interactive, cross-platform *
 
 
 chmod +x interactive_git_automation.sh test_git_automation.sh
-▶️ Step 2: Run the test script
+
+### ▶️ Step 2: Run the test script
 
 ./test_git_automation.sh
 This will:
@@ -73,7 +75,7 @@ Create a repo on GitHub
 
 Push all branches and commits
 
-📜 Example Commit Log
+### 📜 Example Commit Log
 
 * 0dd4287 (origin/feature2, feature2) Version 1.0.2 update in feature2
 * 381a0e7 (origin/feature1, feature1) Version 1.0.1 update in feature1
