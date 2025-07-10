@@ -62,8 +62,8 @@ Git-Automation-Project/
 
 ### 1. Clone the Project
 ```bash
-git clone https://github.com/your-username/git-automation-shell.git
-cd git-automation-shell
+git clone https://github.com/Raafiya-Gouher/Git-Workflow-Automation-Using-Interactive-Shell-Scripts.git
+cd Git-Workflow-Automation-Using-Interactive-Shell-Scripts```
 
 ---
 
