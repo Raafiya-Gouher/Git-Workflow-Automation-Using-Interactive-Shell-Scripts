@@ -41,6 +41,7 @@ Git-Automation-Project/
 ├── version.txt # Auto-updated version file
 └── README.md # You're reading it!
 
+---
 
 
 ## ⚙️ Requirements
