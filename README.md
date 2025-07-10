@@ -83,25 +83,33 @@ chmod +x test_git_automation.sh
 ./test_git_automation.sh
 ```
 
-This will:
+You will be prompted to:
 
-* Prompt you for repo name, branch names, and visibility
+* Enter a GitHub repository name
 
-* Set up ``` README.md ``` (optional)
+* Provide branch names
 
-* Add ``` version.txt ``` with commits per branch
+* Choose to include a README or not
 
-* Create a repo on GitHub
+* Set visibility (public/private)
 
-* Push all branches and commits
+* Authenticate via GitHub CLI (first-time only)
+  
+  
+## 📄 What Gets Created
 
-### 📜 Example Commit Log
+* A new Git repo under the given name
 
+* A file called version.txt that tracks:
 ```
-* 0dd4287 (origin/feature2, feature2) Version 1.0.2 update in feature2
-* 381a0e7 (origin/feature1, feature1) Version 1.0.1 update in feature1
-* 172a373 (origin/main, main) Initial version 1.0.0 on main
+Version: 1.0.0 (main)
+Version: 1.0.1 (feature-login)
+Version: 1.0.2 (bugfix-api)
 ```
+* A README (if opted in)
+* Separate commits on each branch with version updates
+
+* All changes pushed to a new GitHub repo
 ---
 
 
@@ -118,4 +126,17 @@ After running the main script, you can test by:
   git log --oneline --graph --all
   ```
 
+## 🧪 Sample Output
+
+📁 Creating and initializing repo: my-test-repo
+📄 README.md created.
+🌐 Creating GitHub repo (public)...
+✅ 'my-test-repo' has been created and pushed successfully.
+
+📜 Git Commit History:
+```
+* 7a3 Initial version 1.0.2 on bugfix-api
+* 37b Initial version 1.0.1 on feature-login
+* c12 Initial version 1.0.0 on main
+```
 ---
