@@ -45,13 +45,25 @@ Git-Automation-Project/
 ---
 
 
-## ⚙️ Requirements
+## 🔧 Requirements
 
-- Git ✅  
-- GitHub CLI (`gh`) ✅  
-- Unix-like shell (Linux, macOS, Git Bash on Windows)
+| Tool        | Required | Install Guide                         |
+|-------------|----------|----------------------------------------|
+| Git         | ✅ Yes   | [git-scm.com](https://git-scm.com/downloads) |
+| GitHub CLI  | ✅ Yes   | [cli.github.com](https://cli.github.com/) |
+| Linux (Debian/Ubuntu) | ✅ For auto-install | Works best with APT |
 
-> 💡 Windows users must run via **Git Bash** or **WSL**.
+> ⚠️ **Windows users**: Use Git Bash or WSL.  
+> ⚠️ **macOS**: Manual installation of Git and GitHub CLI is required.
+
+---
+
+## 📦 Setup Instructions
+
+### 1. Clone the Project
+```bash
+git clone https://github.com/your-username/git-automation-shell.git
+cd git-automation-shell
 
 ---
 
