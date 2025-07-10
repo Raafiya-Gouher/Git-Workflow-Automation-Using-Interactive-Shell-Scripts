@@ -79,10 +79,11 @@ Push all branches and commits
 
 ### 📜 Example Commit Log
 
+```
 * 0dd4287 (origin/feature2, feature2) Version 1.0.2 update in feature2
 * 381a0e7 (origin/feature1, feature1) Version 1.0.1 update in feature1
 * 172a373 (origin/main, main) Initial version 1.0.0 on main
-
+```
 ---
 
 
