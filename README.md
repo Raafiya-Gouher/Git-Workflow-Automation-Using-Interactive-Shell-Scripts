@@ -62,8 +62,9 @@ Git-Automation-Project/
 chmod +x interactive_git_automation.sh test_git_automation.sh
 
 ### ▶️ Step 2: Run the test script
-
+```
 ./test_git_automation.sh
+```
 
 This will:
 
