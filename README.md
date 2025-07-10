@@ -73,7 +73,8 @@ cd Git-Workflow-Automation-Using-Interactive-Shell-Scripts
 ### 🔧 Step 1: Make scripts executable
 
 ```
-chmod +x interactive_git_automation.sh test_git_automation.sh
+chmod +x interactive_git_automation.sh
+chmod +x test_git_automation.sh
 ```
 
 
