@@ -36,10 +36,10 @@ This project simplifies repetitive Git tasks using interactive, cross-platform *
 ## 💻 File Structure
 
 Git-Automation-Project/
-├── interactive_git_automation.sh # Main interactive script
-├── test_git_automation.sh # Test runner
-├── version.txt # Auto-updated version file
-└── README.md # You're reading it!
+`interactive_git_automation.sh` – Main interactive script
+- `test_git_automation.sh` – Test runner to simulate the workflow
+- `version.txt` – Tracks version info per branch
+- `README.md` – Project documentation
 
 ---
 
