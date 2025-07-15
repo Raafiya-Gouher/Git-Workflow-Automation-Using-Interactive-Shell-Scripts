@@ -18,22 +18,79 @@ git config --global init.defaultBranch main
 
 # --- Functions for installing missing tools ---
 
-install_git() {
-    echo "🛠 Installing Git..."
-    sudo apt update && sudo apt install -y git
+detect_os() {
+    OS="$(uname -s)"
+    case "$OS" in
+        Linux*)
+            if grep -qi microsoft /proc/version 2>/dev/null; then
+                MACHINE="WSL"
+                echo "🖥️ Detected: Windows Subsystem for Linux (WSL)"
+            else
+                MACHINE="Linux"
+                echo "🖥️ Detected: Linux (Ubuntu/Debian)"
+            fi
+            ;;
+        Darwin*)
+            MACHINE="Mac"
+            echo "🖥️ Detected: macOS"
+            ;;
+        MINGW*|MSYS*|CYGWIN*)
+            MACHINE="Windows"
+            echo "🖥️ Detected: Windows (Git Bash)"
+            ;;
+        *)
+            MACHINE="UNKNOWN"
+            echo "⚠️ Unsupported OS: $OS"
+            ;;
+    esac
 }
 
-install_gh_cli() {
-    echo "🛠 Installing GitHub CLI..."
-    type -p curl >/dev/null || sudo apt install -y curl
-    curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | \
-      sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
-    sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] \
-    https://cli.github.com/packages stable main" | \
-    sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-    sudo apt update && sudo apt install -y gh
+detect_os 
+
+install_git() {
+    if [[ "$MACHINE" == "Linux" ]]; then
+        echo "🛠 Installing Git on Linux..."
+        sudo apt update && sudo apt install -y git
+    elif [[ "$MACHINE" == "Mac" ]]; then
+        echo "💡 macOS detected. Please install Git using Homebrew:"
+        echo "   brew install git"
+        exit 1
+    elif [[ "$MACHINE" == "Windows" ]]; then
+        echo "💡 Windows detected. Please install Git manually from:"
+        echo "   https://git-scm.com/download/win"
+        exit 1
+    else
+        echo "❌ Unsupported OS for automatic Git installation."
+        exit 1
+    fi
 }
+
+
+install_gh_cli() {
+    if [[ "$MACHINE" == "Linux" ]]; then
+        echo "🛠 Installing GitHub CLI on Linux..."
+        type -p curl >/dev/null || sudo apt install -y curl
+        curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | \
+          sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+        sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+        echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] \
+        https://cli.github.com/packages stable main" | \
+        sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+        sudo apt update && sudo apt install -y gh
+    elif [[ "$MACHINE" == "Mac" ]]; then
+        echo "💡 macOS detected. Please install GitHub CLI using Homebrew:"
+        echo "   brew install gh"
+        exit 1
+    elif [[ "$MACHINE" == "Windows" ]]; then
+        echo "💡 Windows detected. Please install GitHub CLI manually from:"
+        echo "   https://cli.github.com/"
+        exit 1
+    else
+        echo "❌ Unsupported OS for GitHub CLI installation."
+        exit 1
+    fi
+}
+
 
 # --- Check for Git and GitHub CLI ---
 
