@@ -19,16 +19,17 @@ This project simplifies repetitive Git tasks using interactive, cross-platform *
 
 ---
 
-## 🧰 Features
+## ✨ Features
 
-| Feature | Description |
-|--------|-------------|
-| 🔧 Auto-installs Git & GitHub CLI (if missing) | No setup headaches |
-| 🌱 Creates multiple branches | With unique commit messages per branch |
-| 🗂️ Adds version tracking file (`version.txt`) | Tracks changes by branch/version |
-| 📄 Optional README.md file creation | You choose what to include |
-| 🐙 Creates and pushes to GitHub repo via CLI | Fully remote-enabled |
-| 🧪 Includes test script | Simulate & verify your workflow |
+✅ Interactive CLI inputs (repo name, branches, visibility)  
+✅ Git & GitHub CLI detection and Linux auto-installation  
+✅ GitHub authentication check  
+✅ Optional README.md file creation  
+✅ Version tracking via `version.txt`  
+✅ Public or private GitHub repo creation  
+✅ Pushes all branches and commits to GitHub  
+✅ Companion test script to simulate full workflow  
+
 
 ---
 
@@ -44,47 +45,67 @@ Git-Automation-Project/
 ---
 
 
-## ⚙️ Requirements
+## 🔧 Requirements
 
-- Git ✅  
-- GitHub CLI (`gh`) ✅  
-- Unix-like shell (Linux, macOS, Git Bash on Windows)
+| Tool        | Required | Install Guide                         |
+|-------------|----------|----------------------------------------|
+| Git         | ✅ Yes   | [git-scm.com](https://git-scm.com/downloads) |
+| GitHub CLI  | ✅ Yes   | [cli.github.com](https://cli.github.com/) |
+| Linux (Debian/Ubuntu) | ✅ For auto-install | Works best with APT |
 
-> 💡 Windows users must run via **Git Bash** or **WSL**.
+> ⚠️ **Windows users**: Use Git Bash or WSL.  
+> ⚠️ **macOS**: Manual installation of Git and GitHub CLI is required.
 
 ---
 
-## 🚀 Getting Started
+## 📦 Setup Instructions
 
-### 🔧 Step 1: Make scripts executable
+### 1. Clone the Project
+```bash
+git clone https://github.com/Raafiya-Gouher/Git-Workflow-Automation-Using-Interactive-Shell-Scripts.git
+cd Git-Workflow-Automation-Using-Interactive-Shell-Scripts
+```
+
+### 2. Make scripts executable
+
+```
+chmod +x interactive_git_automation.sh
+chmod +x test_git_automation.sh
+```
 
 
-chmod +x interactive_git_automation.sh test_git_automation.sh
-
-### ▶️ Step 2: Run the test script
+### 3. Run the test script
 ```
 ./test_git_automation.sh
 ```
 
-This will:
+You will be prompted to:
 
-Prompt you for repo name, branch names, and visibility
+* Enter a GitHub repository name
 
-Set up README.md (optional)
+* Provide branch names
 
-Add version.txt with commits per branch
+* Choose to include a README or not
 
-Create a repo on GitHub
+* Set visibility (public/private)
 
-Push all branches and commits
+* Authenticate via GitHub CLI (first-time only)
+  
+  
+## 📄 What Gets Created
 
-### 📜 Example Commit Log
+* A new Git repo under the given name
 
+* A file called version.txt that tracks:
 ```
-* 0dd4287 (origin/feature2, feature2) Version 1.0.2 update in feature2
-* 381a0e7 (origin/feature1, feature1) Version 1.0.1 update in feature1
-* 172a373 (origin/main, main) Initial version 1.0.0 on main
+Version: 1.0.0 (main)
+Version: 1.0.1 (feature-login)
+Version: 1.0.2 (bugfix-api)
 ```
+* A README (if opted in)
+* Separate commits on each branch with version updates
+
+* All changes pushed to a new GitHub repo
 ---
 
 
@@ -94,8 +115,32 @@ After running the main script, you can test by:
 
 - Viewing branches in GitHub
 
-- Opening and reading version.txt
+- Opening and reading ``` version.txt ```
 
-- Verifying commit history with: git log --oneline --graph --all
+- Verifying commit history with:
+  ```
+  git log --oneline --graph --all
+  ```
 
+## 🧪 Sample Output
+
+* Enter your GitHub repository name: ```Git-Workflow-Automation-Using-Interactive-Shell-Scripts```
+* Enter the number of additional branches: ```2```
+* Enter name for branch #1: ```feature1```
+* Enter name for branch #2: ```feature2```
+* Do you want to include a README.md file? (yes/no): ```yes```
+* Should the GitHub repo be public or private? (public/private): ```public```
+* ```Git-Workflow-Automation-Using-Interactive-Shell-Scripts``` has been created and pushed successfully.
+*  Git automation executed successfully.
+* Do you want to view version.txt from a branch? (yes/no): ```yes```
+* Enter repo name: ```Git-Workflow-Automation-Using-Interactive-Shell-Scripts```
+* Enter branch to view version.txt (e.g., feature-login): ```main```
+
+
+📜 Git Commit History:
+```
+* 7a3 Initial version 1.0.2 on bugfix-api
+* 37b Initial version 1.0.1 on feature-login
+* c12 Initial version 1.0.0 on main
+```
 ---
